@@ -3,8 +3,8 @@ body {
   font-size: 16px;
   line-height: 1;
 }
-
-textarea {
+/**/
+.text-area {
   background: transparent;
   border: none;
   resize: none;
@@ -12,8 +12,8 @@ textarea {
   border-left: 1px solid black;
   padding: 10px;
 }
-
-.jumbotron {
+/**/
+.jumbotron { 
   text-align: center;
   background-color: transparent;
   color: black;
@@ -69,3 +69,5 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+
