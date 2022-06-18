@@ -1,3 +1,26 @@
+var inputContent = document.getElementById("input9AM");
+var saveContent = document.getElementById("button-addon9AM");
+
+
+saveContent.addEventListener("click", function(event){
+    event.preventDefault();
+
+    var content = document.getElementById("input9AM").value;
+
+    if (!content === ""){
+        localStorage.setItem("content", content);
+        renderLastRegistered();
+    }
+});
+
+function renderLastRegistered(){
+    var content = localStorage.getItem("content");
+
+    inputContent.textContent = content;
+}
+
+
+
 
 //change the background color of the input based on time of the day.
 function backgroundColor(){
@@ -22,8 +45,6 @@ function backgroundColor(){
         }
         
         //compares 24H format current time with 24H formt time in input element
-        var checkTime = $(".text-area");
-        console.log(checkTime)
         if(iCurrentTime > iTimeEl){
             $(".text-area").eq(i).addClass("past");
             } else if ( iCurrentTime < iTimeEl){
@@ -33,8 +54,8 @@ function backgroundColor(){
             }   
     };
 };
-backgroundColor();
 
+backgroundColor();
 
 
 
