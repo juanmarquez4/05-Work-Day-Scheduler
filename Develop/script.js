@@ -36,29 +36,35 @@ backgroundColor();
 
 // // Changes the content of the input tag and saves it in the local storage
 
-var inputContent = document.querySelector(".form-control");
-var saveContent = document.querySelector(".btn");
+var inputContent = document.querySelectorAll(".form-control");
+var saveContent = document.querySelectorAll(".btn");
 
 console.log(inputContent);
 console.log(saveContent);
 
 function renderLastRegistered(event){
-    var event = inputContent.value;
-    console.log("welcome to " + event);
 
-    if ( event !== ""){
-        localStorage.setItem("content", event);
-        console.log(localStorage);        
-    }
-
-    var currentContent = localStorage.getItem("content");
-    console.log("this is my " + currentContent);
-
-    inputContent.placeholder = currentContent;
+    for (var i=0; i<inputContent.length; i++){
+        var event = inputContent[i].value;
+        console.log("welcome to " + event);
     
+        if ( event !== ""){
+            localStorage.setItem("content", event);
+            console.log(localStorage);        
+        }
+    
+        var currentContent = localStorage.getItem("content");
+        console.log("this is my " + currentContent);
+    
+        inputContent[i].placeholder = currentContent;
+    }    
 };
 
-saveContent.addEventListener("click",renderLastRegistered);
+for (var i=0; i< saveContent.length; i++){
+    saveContent[i].addEventListener("click",renderLastRegistered);
+    console.log(saveContent[i]);
+
+};
 
 
 renderLastRegistered();
