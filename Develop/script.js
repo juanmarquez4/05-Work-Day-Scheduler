@@ -36,18 +36,16 @@ backgroundColor();
 
 // // Changes the content of the input tag and saves it in the local storage
 
-var inputContent = document.querySelectorAll(".form-control");
+var inputContent = document.querySelector(".form-control");
 var saveContent = document.querySelectorAll(".btn");
 
 console.log(inputContent);
 console.log(saveContent);
 
 function renderLastRegistered(event){
-
-    for (var i=0; i<inputContent.length; i++){
-        var event = inputContent[i].value;
-        console.log("welcome to " + event);
     
+        var event = inputContent.value;
+        console.log("welcome to " + event);
         if ( event !== ""){
             localStorage.setItem("content", event);
             console.log(localStorage);        
@@ -56,21 +54,45 @@ function renderLastRegistered(event){
         var currentContent = localStorage.getItem("content");
         console.log("this is my " + currentContent);
     
-        inputContent[i].placeholder = currentContent;
-    }    
+        inputContent.placeholder = currentContent;
+      
 };
 
 for (var i=0; i< saveContent.length; i++){
     saveContent[i].addEventListener("click",renderLastRegistered);
-    console.log(saveContent[i]);
-
 };
 
-
 renderLastRegistered();
-// // ///////////////////////////////////////
 
+// Changes the content of the input tag and saves it in the local storage TODO: Version2.0
 
+// var saveContent = document.querySelectorAll(".btn");
+// console.log(saveContent);
 
+// function renderLastRegistered(event){
+    
+//         var event = $(this).siblings(".form-control").val();
+//         console.log("welcome to " + event);
+//         console.log($(this).siblings());
+//         if ( event !== ""){
+//             localStorage.setItem("content", event);
+//             console.log(localStorage);        
+//         }
+    
+//         var currentContent = localStorage.getItem("content");
+//         console.log("this is my " + currentContent);
+//         // var task =  $(this).siblings().input.placeholder;
+//         // console.log(task);
+//         // event.placeholder = currentContent;
+      
+// };
+
+// for (var i=0; i< saveContent.length; i++){
+//     saveContent[i].addEventListener("click",renderLastRegistered);
+// };
+
+// renderLastRegistered();
+
+///////////////////////////////////
 
 
