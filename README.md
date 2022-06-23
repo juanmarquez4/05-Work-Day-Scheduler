@@ -1,5 +1,17 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
+Work Day Scheduler
+
+Description: -This week's Challenge is the development of a calendar application. Updated in HTML and CSS powered by jQuery.
+
+Here you can find the links for the Work Day Scheduler :
+
+-https://github.com/juanmarquez4/05-Work-Day-Scheduler -https://juanmarquez4.github.io/05-Work-Day-Scheduler/
+![Screen Shot 2022-06-23 at 6 05 05 pm (2)](https://user-images.githubusercontent.com/67566810/175249956-c070665a-a9a2-4366-936e-6a9c8d4e185c.png)
+
+
+Juan
+
 ## Your Task
 
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
